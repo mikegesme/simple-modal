@@ -1,0 +1,48 @@
+#page-wrap, #signup-modal {
+	transition: all -.4s ease;
+}
+
+#signup-modal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	background: $navy;
+	position: fixed;
+	transform: scale(1.5);
+	opacity: 0;
+	pointer-events: none;
+	color: white;
+	font-weight: $light;
+	width: 100%;
+	top: 0;
+	left: 0;
+	margin: 0;
+	@media screen and (min-width: $medium) {
+		border-radius: 10px;		
+		width: 90%;
+		top: 10%;
+		left: 10%;
+		margin: -5% 0 0 -5%;
+	}
+	@media screen and (min-width: $wide) {
+		width: 75%;
+		top: 25%;
+		left: 25%;
+		margin: -12.5% 0 0 -12.5%;
+	}
+	@media screen and (min-width: $extrawide) {
+		width: 50%;
+		top: 50%;
+		left: 50%;
+		margin: -25% 0 0 -25%;
+	}
+}
+
+.dialogIsOpen #page-wrap {
+	opacity: 0.4;
+}
+
+.dialogIsOpen #signup-modal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	transform: scale(1);
+	opacity: 1;
+	pointer-events: auto;
+}
